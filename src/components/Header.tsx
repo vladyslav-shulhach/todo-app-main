@@ -1,7 +1,9 @@
+import styles from "./Header.module.scss";
+
 function Header() {
   return (
     <header className="header">
-      <h1 className="header-title">Todo App</h1>
+      <h1 className={styles.header}>Todo App</h1>
     </header>
   );
 }
