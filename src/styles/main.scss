@@ -1,1 +1,26 @@
+@import "normalize.css";
+@import "./variables";
 
+// Font
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+}
+
+// Theme tokens (CSS variables)
+[data-theme="light"] {
+  --background-color: #{$light-light-grayish-blue};
+  --text-color: #{$light-very-dark-grayish-blue};
+}
+
+[data-theme="dark"] {
+  --background-color: #{$dark-dark-blue};
+  --text-color: #{$dark-light-grayish-blue};
+}
+
+// Global styles
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
