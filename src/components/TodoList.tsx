@@ -1,7 +1,12 @@
 function TodoList() {
   return (
     <ul>
-      <li>Example todo</li>
+      <li>
+        <label>
+          <input type="checkbox" />
+          <span>Example todo</span>
+        </label>
+      </li>
     </ul>
   );
 }
