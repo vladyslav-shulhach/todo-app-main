@@ -8,13 +8,15 @@ import TodoFooter from "./components/TodoFooter";
 import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
-  <div className="app-container">
-    <Header />
-    <ThemeToggle />
-    <TodoInput />
-    <TodoList />
-    <TodoFooter />
-  </div>;
+  return (
+    <div className="app-container">
+      <Header />
+      <ThemeToggle />
+      <TodoInput />
+      <TodoList />
+      <TodoFooter />
+    </div>
+  );
 }
 
 export default App;
