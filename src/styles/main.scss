@@ -7,7 +7,7 @@ body {
   font-size: $font-size-base;
 }
 
-// Theme tokens (CSS variables)
+// Theme tokens
 [data-theme="light"] {
   --background-color: #{$light-light-grayish-blue};
   --text-color: #{$light-very-dark-grayish-blue};

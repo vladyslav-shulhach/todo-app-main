@@ -12,6 +12,7 @@ import ThemeToggle from "./components/ThemeToggle";
 function App() {
   // State variables
   const [todos, setTodos] = useState<Todo[]>([]);
+  const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
 
   return (
     <div className="app-container">
@@ -20,7 +21,12 @@ function App() {
         <ThemeToggle />
         <TodoInput setTodos={setTodos} />
         <TodoList todos={todos} setTodos={setTodos} />
-        <TodoFooter todos={todos} setTodos={setTodos} />
+        <TodoFooter
+          todos={todos}
+          setTodos={setTodos}
+          filter={filter}
+          setFilter={setFilter}
+        />
       </Layout>
     </div>
   );

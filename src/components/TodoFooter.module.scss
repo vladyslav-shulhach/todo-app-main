@@ -1,0 +1,44 @@
+@import "../styles/variables";
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 0.2rem 0.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.active {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.clear {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
