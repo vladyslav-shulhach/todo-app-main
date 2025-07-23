@@ -1,4 +1,6 @@
 import type { Todo } from "../types/Todo";
+import TodoItem from "./TodoItem";
+import styles from "./TodoList.module.scss";
 
 type Props = {
   todos: Todo[];
@@ -6,27 +8,18 @@ type Props = {
 };
 
 function TodoList({ todos, setTodos }: Props) {
-  function toggleTodo(id: string) {
+  const toggleTodo = (id: string) => {
     setTodos((prev) =>
       prev.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
-  }
+  };
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {todos.map((todo) => (
-        <li key={todo.id}>
-          <label>
-            <input
-              type="checkbox"
-              checked={todo.completed}
-              onChange={() => toggleTodo(todo.id)}
-            />
-            <span>{todo.text}</span>
-          </label>
-        </li>
+        <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
       ))}
     </ul>
   );

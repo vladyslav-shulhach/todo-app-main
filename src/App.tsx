@@ -1,34 +1,35 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import type { Todo } from "./types/Todo";
-import Layout from "./components/Layout";
 import Header from "./components/Header";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 import TodoFooter from "./components/TodoFooter";
-import ThemeToggle from "./components/ThemeToggle";
+import TodoFilter from "./components/TodoFilter";
 
 function App() {
   // State variables
   const [todos, setTodos] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
 
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === "active") return !todo.completed;
+    if (filter === "completed") return todo.completed;
+    return true;
+  });
+
   return (
-    <div className="app-container">
-      <Layout>
-        <Header />
-        <ThemeToggle />
+    <>
+      <Header />
+      <main className="app-container">
         <TodoInput setTodos={setTodos} />
-        <TodoList todos={todos} setTodos={setTodos} />
-        <TodoFooter
-          todos={todos}
-          setTodos={setTodos}
-          filter={filter}
-          setFilter={setFilter}
-        />
-      </Layout>
-    </div>
+        <TodoList todos={filteredTodos} setTodos={setTodos} />
+        <TodoFooter todos={todos} setTodos={setTodos} />
+        <TodoFilter filter={filter} setFilter={setFilter} />
+      </main>
+      <footer className="site-footer">
+        © {new Date().getFullYear()} Vladyslav Shulhach. All rights reserved.
+      </footer>
+    </>
   );
 }
 

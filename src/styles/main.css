@@ -1,1 +1,21 @@
-/*# sourceMappingURL=main.css.map */
+@import "normalize.css";
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+
+[data-theme=light] {
+  --background-color: hsl(233, 11%, 84%);
+  --text-color: hsl(235, 19%, 35%);
+}
+
+[data-theme=dark] {
+  --background-color: hsl(235, 21%, 11%);
+  --text-color: hsl(234, 39%, 85%);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}/*# sourceMappingURL=main.css.map */

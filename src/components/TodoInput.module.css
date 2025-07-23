@@ -1,0 +1,16 @@
+.inputWrapper {
+  background: hsl(236, 33%, 92%);
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  outline: none;
+}/*# sourceMappingURL=TodoInput.module.css.map */

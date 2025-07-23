@@ -1,6 +1,5 @@
-@import "../styles/variables";
 .footerWrapper {
-  background: $light-very-light-grayish-blue;
+  background: hsl(236, 33%, 92%);
   padding: 1.2rem 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -15,25 +14,23 @@
 .filters {
   display: flex;
   gap: 0.5rem;
-
-  button {
-    background: none;
-    border: none;
-    color: var(--color-text);
-    padding: 0.3rem 0.7rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.2s;
-
-    &:hover {
-      background: var(--color-border);
-    }
-  }
+}
+.filters button {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.filters button:hover {
+  background: var(--color-border);
 }
 
 .active {
   font-weight: bold;
-  color: $primary-color;
+  color: hsl(220, 98%, 61%);
 }
 
 .clear {
@@ -44,8 +41,7 @@
   padding: 0.3rem 0.7rem;
   border-radius: 5px;
   transition: background 0.2s;
-
-  &:hover {
-    background: var(--color-border);
-  }
 }
+.clear:hover {
+  background: var(--color-border);
+}/*# sourceMappingURL=TodoFooter.module.css.map */

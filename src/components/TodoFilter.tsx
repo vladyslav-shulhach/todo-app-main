@@ -1,29 +1,29 @@
+import styles from "./TodoFooter.module.scss"; // reuse filter styles
+
+type Filter = "all" | "active" | "completed";
 type Props = {
-  filter: "all" | "active" | "completed";
-  setFilter: (value: "all" | "active" | "completed") => void;
+  filter: Filter;
+  setFilter: (value: Filter) => void;
 };
+
+const FILTER_OPTIONS: { label: string; value: Filter }[] = [
+  { label: "All", value: "all" },
+  { label: "Active", value: "active" },
+  { label: "Completed", value: "completed" },
+];
 
 function TodoFilter({ filter, setFilter }: Props) {
   return (
-    <div>
-      <button
-        onClick={() => setFilter("all")}
-        className={filter === "all" ? "active" : ""}
-      >
-        All
-      </button>
-      <button
-        onClick={() => setFilter("active")}
-        className={filter === "active" ? "active" : ""}
-      >
-        Active
-      </button>
-      <button
-        onClick={() => setFilter("completed")}
-        className={filter === "completed" ? "active" : ""}
-      >
-        Completed
-      </button>
+    <div className={styles.filters}>
+      {FILTER_OPTIONS.map((opt) => (
+        <button
+          key={opt.value}
+          onClick={() => setFilter(opt.value)}
+          className={filter === opt.value ? styles.active : ""}
+        >
+          {opt.label}
+        </button>
+      ))}
     </div>
   );
 }
