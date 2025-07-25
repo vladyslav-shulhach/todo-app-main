@@ -1,5 +1,5 @@
-import type { Todo } from "../types/Todo";
-import TodoItem from "./TodoItem";
+import type { Todo } from "../../types/Todo";
+import TodoItem from "../TodoItem/TodoItem";
 import styles from "./TodoList.module.scss";
 
 type Props = {

@@ -1,17 +1,8 @@
-@import "../styles/variables";
+@import "../../styles/variables";
 
-// Header.module.scss
 .header {
-  background-image: url("../images/bg-mobile-light.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 2rem;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 12.75rem;
 }
 
 .title {

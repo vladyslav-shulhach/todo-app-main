@@ -1,5 +1,5 @@
 import styles from "./TodoFooter.module.scss";
-import type { Todo } from "../types/Todo";
+import type { Todo } from "../../types/Todo";
 
 type Props = {
   todos: Todo[];

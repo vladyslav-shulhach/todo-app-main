@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Todo } from "../types/Todo";
+import type { Todo } from "../../types/Todo";
 import styles from "./TodoInput.module.scss";
 
 type Props = {
