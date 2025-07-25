@@ -11,6 +11,13 @@ function App() {
   // State variables
   const [todos, setTodos] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
 
   const filteredTodos = todos.filter((todo) => {
     if (filter === "active") return !todo.completed;
@@ -20,9 +27,9 @@ function App() {
 
   return (
     <>
-      <Banner />
+      <Banner theme={theme} />
       <div className="main-container">
-        <Header />
+        <Header theme={theme} toggleTheme={toggleTheme} />
         <main>
           <TodoInput setTodos={setTodos} />
           <TodoList todos={filteredTodos} setTodos={setTodos} />

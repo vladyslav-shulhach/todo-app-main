@@ -1,17 +1,13 @@
 import styles from "./Header.module.scss";
-import { useState } from "react";
 import SunIcon from "../../assets/images/icon-sun.svg";
 import MoonIcon from "../../assets/images/icon-moon.svg";
 
-function Header() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+type Props = {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+};
 
-  function toggleTheme() {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  }
-
+function Header({ theme, toggleTheme }: Props) {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>Todo</h1>
