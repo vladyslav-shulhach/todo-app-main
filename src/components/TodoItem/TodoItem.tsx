@@ -4,12 +4,20 @@ import type { Todo } from "../../types/Todo";
 type Props = {
   todo: Todo;
   toggleTodo: (id: string) => void;
+  isFirst?: boolean;
+  isMiddle?: boolean;
+  isLast?: boolean;
 };
 
-function TodoItem({ todo, toggleTodo }: Props) {
+function TodoItem({ todo, toggleTodo, isFirst, isMiddle, isLast }: Props) {
   const { id, text, completed } = todo;
+
+  let radiusClass = "";
+  if (isFirst) radiusClass = styles.topRadius;
+  else if (isMiddle || isLast) radiusClass = styles.noRadius;
+
   return (
-    <li className={styles.item}>
+    <li className={`${styles.item} ${radiusClass}`}>
       <label className={styles.label}>
         <input
           type="checkbox"

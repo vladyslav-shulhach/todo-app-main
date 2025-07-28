@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+.filters {
+  background: $light-very-light-grayish-blue;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.2rem 0;
+
+  button {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: var(--color-border);
+    }
+  }
+}
+
+.active {
+  font-weight: bold;
+  color: var(--color-accent, #6366f1);
+  background: var(--color-border);
+}

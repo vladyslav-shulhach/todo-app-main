@@ -18,8 +18,15 @@ function TodoList({ todos, setTodos }: Props) {
 
   return (
     <ul className={styles.list}>
-      {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+      {todos.map((todo, idx) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          toggleTodo={toggleTodo}
+          isFirst={idx === 0}
+          isMiddle={idx > 0 && idx < todos.length - 1}
+          isLast={idx === todos.length - 1 && todos.length > 1}
+        />
       ))}
     </ul>
   );

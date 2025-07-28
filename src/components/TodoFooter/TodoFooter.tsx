@@ -4,9 +4,10 @@ import type { Todo } from "../../types/Todo";
 type Props = {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  noTodos?: boolean;
 };
 
-function TodoFooter({ todos, setTodos }: Props) {
+function TodoFooter({ todos, setTodos, noTodos = false }: Props) {
   const itemsLeft = todos.filter((todo) => !todo.completed).length;
 
   function handleClearCompleted() {
@@ -14,7 +15,13 @@ function TodoFooter({ todos, setTodos }: Props) {
   }
 
   return (
-    <footer className={styles.footerWrapper}>
+    <footer
+      className={
+        noTodos
+          ? `${styles.footerWrapper} ${styles.fullRadius}`
+          : `${styles.footerWrapper} ${styles.bottomRadius}`
+      }
+    >
       <div className={styles.footer}>
         <span>{itemsLeft} items left</span>
         <button onClick={handleClearCompleted} className={styles.clear}>

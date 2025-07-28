@@ -1,11 +1,19 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 
 .item {
   background: $light-very-light-grayish-blue;
   padding: 1.2rem 1.5rem;
-  border-radius: 8px;
   display: flex;
   align-items: center;
+  // Remove border-radius here, use conditional classes below
+}
+
+.topRadius {
+  border-radius: 8px 8px 0 0;
+}
+
+.noRadius {
+  border-radius: 0;
 }
 
 .label {

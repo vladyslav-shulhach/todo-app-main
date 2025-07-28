@@ -33,7 +33,11 @@ function App() {
         <main>
           <TodoInput setTodos={setTodos} />
           <TodoList todos={filteredTodos} setTodos={setTodos} />
-          <TodoFooter todos={todos} setTodos={setTodos} />
+          <TodoFooter
+            todos={todos}
+            setTodos={setTodos}
+            noTodos={filteredTodos.length === 0}
+          />
           <TodoFilter filter={filter} setFilter={setFilter} />
         </main>
         <footer className="site-footer">

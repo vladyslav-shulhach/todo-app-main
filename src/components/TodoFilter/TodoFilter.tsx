@@ -1,4 +1,4 @@
-import styles from "../TodoFooter/TodoFooter.module.scss"; // reuse filter styles
+import styles from "./TodoFilter.module.scss";
 
 type Filter = "all" | "active" | "completed";
 type Props = {

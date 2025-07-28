@@ -1,9 +1,17 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 .footerWrapper {
   background: $light-very-light-grayish-blue;
   padding: 1.2rem 1.5rem;
-  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  // Remove border-radius here, use conditional classes below
+}
+
+.fullRadius {
+  border-radius: 8px;
+}
+
+.bottomRadius {
+  border-radius: 0 0 8px 8px;
 }
 
 .footer {
