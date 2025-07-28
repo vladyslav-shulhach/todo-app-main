@@ -8,6 +8,10 @@
   // Remove border-radius here, use conditional classes below
 }
 
+[data-theme="dark"] .item {
+  background: $dark-very-dark-desaturated-blue;
+}
+
 .topRadius {
   border-radius: 8px 8px 0 0;
 }

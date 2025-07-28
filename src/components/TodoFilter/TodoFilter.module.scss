@@ -25,6 +25,10 @@
   }
 }
 
+[data-theme="dark"] .filters {
+  background: $dark-very-dark-desaturated-blue;
+}
+
 .active {
   font-weight: bold;
   color: var(--color-accent, #6366f1);

@@ -6,6 +6,10 @@
   // Remove border-radius here, use conditional classes below
 }
 
+[data-theme="dark"] .footerWrapper {
+  background: $dark-very-dark-desaturated-blue;
+}
+
 .fullRadius {
   border-radius: 8px;
 }
