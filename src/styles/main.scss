@@ -1,5 +1,5 @@
-@import "normalize.css";
-@import "./variables";
+@use "normalize.css" as *;
+@use "./variables" as *;
 
 // Font
 body {
