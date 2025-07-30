@@ -1,6 +1,6 @@
 @use "../../styles/variables" as *;
 .footerWrapper {
-  background: $light-very-light-grayish-blue;
+  background: $light-very-light-gray;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   // Remove border-radius here, use conditional classes below

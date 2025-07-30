@@ -1,11 +1,10 @@
 @use "../../styles/variables" as *;
 
 .item {
-  background: $light-very-light-grayish-blue;
+  background: $light-very-light-gray;
   padding: 1.2rem 1.5rem;
   display: flex;
   align-items: center;
-  // Remove border-radius here, use conditional classes below
 }
 
 [data-theme="dark"] .item {
