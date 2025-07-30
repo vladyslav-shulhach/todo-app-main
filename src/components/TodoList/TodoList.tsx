@@ -16,16 +16,18 @@ function TodoList({ todos, setTodos }: Props) {
     );
   };
 
+  const deleteTodo = (id: string) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+  };
+
   return (
     <ul className={styles.list}>
-      {todos.map((todo, idx) => (
+      {todos.map((todo) => (
         <TodoItem
           key={todo.id}
           todo={todo}
           toggleTodo={toggleTodo}
-          isFirst={idx === 0}
-          isMiddle={idx > 0 && idx < todos.length - 1}
-          isLast={idx === todos.length - 1 && todos.length > 1}
+          onDelete={deleteTodo}
         />
       ))}
     </ul>

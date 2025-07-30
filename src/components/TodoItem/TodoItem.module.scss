@@ -5,6 +5,7 @@
   padding: 1.2rem 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 [data-theme="dark"] .item {
@@ -54,4 +55,28 @@
 .completed {
   text-decoration: line-through;
   color: $light-dark-grayish-blue;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  img {
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    display: block;
+  }
 }
