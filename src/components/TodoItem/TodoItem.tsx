@@ -1,6 +1,7 @@
 import styles from "./TodoItem.module.scss";
 import type { Todo } from "../../types/Todo";
 import CrossIcon from "../../assets/images/icon-cross.svg";
+import CheckIcon from "../../assets/images/icon-check.svg";
 
 type Props = {
   todo: Todo;
@@ -20,7 +21,11 @@ function TodoItem({ todo, toggleTodo, onDelete }: Props) {
           onChange={() => toggleTodo(id)}
           className={styles.checkbox}
         />
-        <span className={styles.customCheck} />
+        <span className={styles.customCheck}>
+          {completed && (
+            <img src={CheckIcon} alt="Checked" className={styles.checkIcon} />
+          )}
+        </span>
         <span className={completed ? styles.completed : ""}>{text}</span>
       </label>
       <button

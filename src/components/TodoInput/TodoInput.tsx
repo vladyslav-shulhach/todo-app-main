@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Todo } from "../../types/Todo";
 import styles from "./TodoInput.module.scss";
+import CheckIcon from "../../assets/images/icon-check.svg";
 
 type Props = {
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
@@ -37,7 +38,11 @@ function TodoInput({ setTodos }: Props) {
             onChange={() => setCompleted((prev) => !prev)}
             className={styles.checkbox}
           />
-          <span className={styles.customCheck} />
+          <span className={styles.customCheck}>
+            {completed && (
+              <img src={CheckIcon} alt="Checked" className={styles.checkIcon} />
+            )}
+          </span>
         </label>
         <input
           className={styles.input}
