@@ -3,7 +3,6 @@
   background: $light-very-light-gray;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  // Remove border-radius here, use conditional classes below
 }
 
 [data-theme="dark"] .footerWrapper {
@@ -22,6 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  span {
+    color: $light-dark-grayish-blue;
+  }
 }
 
 .filters {
@@ -51,13 +54,13 @@
 .clear {
   background: none;
   border: none;
-  color: var(--color-accent);
+  color: $light-dark-grayish-blue;
   cursor: pointer;
   padding: 0.3rem 0.7rem;
   border-radius: 5px;
   transition: background 0.2s;
 
   &:hover {
-    background: var(--color-border);
+    color: $light-very-dark-grayish-blue;
   }
 }

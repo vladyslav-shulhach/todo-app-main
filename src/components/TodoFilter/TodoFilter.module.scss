@@ -13,13 +13,14 @@
   button {
     background: none;
     border: none;
+    color: $light-dark-grayish-blue;
     padding: 0.3rem 0.7rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.2s;
 
     &:hover {
-      background: var(--color-border);
+      color: $light-very-dark-grayish-blue;
     }
   }
 }
@@ -30,6 +31,6 @@
 
 .active {
   font-weight: bold;
-  color: $primary-color;
+  color: $primary-color !important;
   background: var(--color-border);
 }
