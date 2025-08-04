@@ -3,27 +3,32 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .title {
   color: white;
-  font-size: 1.5rem;
+  font-size: $font-size-large;
   font-weight: 600;
   letter-spacing: 0.8rem;
   text-transform: uppercase;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: calc($font-size-large + 0.75rem);
+  }
 }
 
 .toggleButton {
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: inherit;
   padding: 0.5rem;
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 

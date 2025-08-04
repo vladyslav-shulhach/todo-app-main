@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .banner {
   position: absolute;
   width: 100%;
@@ -6,4 +8,9 @@
   background-position: center center;
   background-size: cover;
   z-index: -1;
+
+  @media (min-width: $breakpoint-tablet) {
+    left: 0;
+    height: 300px;
+  }
 }
