@@ -6,6 +6,7 @@ import TodoInput from "./components/TodoInput/TodoInput";
 import TodoList from "./components/TodoList/TodoList";
 import TodoFooter from "./components/TodoFooter/TodoFooter";
 import TodoFilter from "./components/TodoFilter/TodoFilter";
+import ReorderHint from "./components/ReorderHint/ReorderHint";
 
 function App() {
   // State variables
@@ -39,6 +40,7 @@ function App() {
             noTodos={filteredTodos.length === 0}
           />
           <TodoFilter filter={filter} setFilter={setFilter} />
+          <ReorderHint />
         </main>
         <footer className="site-footer">
           © {new Date().getFullYear()} Vladyslav Shulhach. All rights reserved.

@@ -1,0 +1,9 @@
+@use "../../styles/variables" as *;
+
+.hint {
+  text-align: center;
+  color: $light-dark-grayish-blue;
+  font-size: 0.95rem;
+  margin: 2.75rem 0 0 0;
+  opacity: 0.8;
+}
