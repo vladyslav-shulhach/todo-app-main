@@ -34,3 +34,13 @@
   color: $primary-color !important;
   background: var(--color-border);
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .filters {
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
