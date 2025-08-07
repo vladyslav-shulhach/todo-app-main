@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Todo } from "./types/Todo";
 import Banner from "./components/Banner/Banner";
 import Header from "./components/Header/Header";
@@ -13,6 +13,7 @@ function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -26,6 +27,15 @@ function App() {
     return true;
   });
 
+  // Responsive listener
+  useEffect(() => {
+    function handleResize() {
+      setIsDesktop(window.innerWidth >= 768);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <Banner theme={theme} />
@@ -38,8 +48,11 @@ function App() {
             todos={todos}
             setTodos={setTodos}
             noTodos={filteredTodos.length === 0}
+            filter={filter}
+            setFilter={setFilter}
+            showFilterInline={isDesktop}
           />
-          <TodoFilter filter={filter} setFilter={setFilter} />
+          {!isDesktop && <TodoFilter filter={filter} setFilter={setFilter} />}
           <ReorderHint />
         </main>
         <footer className="site-footer">

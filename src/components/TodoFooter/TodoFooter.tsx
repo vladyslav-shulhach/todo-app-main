@@ -1,13 +1,24 @@
 import styles from "./TodoFooter.module.scss";
 import type { Todo } from "../../types/Todo";
+import TodoFilter from "../TodoFilter/TodoFilter";
 
 type Props = {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
   noTodos?: boolean;
+  filter?: "all" | "active" | "completed";
+  setFilter?: (value: "all" | "active" | "completed") => void;
+  showFilterInline?: boolean;
 };
 
-function TodoFooter({ todos, setTodos, noTodos = false }: Props) {
+function TodoFooter({
+  todos,
+  setTodos,
+  noTodos = false,
+  filter,
+  setFilter,
+  showFilterInline = false,
+}: Props) {
   const itemsLeft = todos.filter((todo) => !todo.completed).length;
 
   function handleClearCompleted() {
@@ -24,6 +35,9 @@ function TodoFooter({ todos, setTodos, noTodos = false }: Props) {
     >
       <div className={styles.footer}>
         <span>{itemsLeft} items left</span>
+        {showFilterInline && filter && setFilter && (
+          <TodoFilter filter={filter} setFilter={setFilter} />
+        )}
         <button onClick={handleClearCompleted} className={styles.clear}>
           Clear Completed
         </button>

@@ -26,6 +26,18 @@
   span {
     color: $light-dark-grayish-blue;
   }
+
+  // Inline filter for desktop
+  @media (min-width: $breakpoint-tablet) {
+    .filters {
+      margin: 0;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      gap: 1.2rem;
+    }
+  }
 }
 
 .filters {
