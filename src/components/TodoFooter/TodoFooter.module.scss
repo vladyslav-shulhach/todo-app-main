@@ -1,6 +1,6 @@
 @use "../../styles/variables" as *;
 .footerWrapper {
-  background: $light-very-light-gray;
+  background: $wrapper-bg-color;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
@@ -10,18 +10,18 @@
 }
 
 .fullRadius {
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .bottomRadius {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 5px 5px;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 
   span {
     color: $light-dark-grayish-blue;

@@ -1,15 +1,15 @@
 @use "../../styles/variables" as *;
 
 .filters {
-  background: $light-very-light-gray;
-  padding: 1.125rem;
-  border-radius: 8px;
+  background: $wrapper-bg-color;
+  padding: 0.87rem 1.25rem;
+  border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
-  margin: 1.2rem 0;
+  margin: 1.1rem 0;
 
   button {
     background: none;
@@ -19,6 +19,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.2s;
+    font-size: 1rem;
 
     &:hover {
       color: $light-very-dark-grayish-blue;

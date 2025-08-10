@@ -18,9 +18,9 @@ function Header({ theme, toggleTheme }: Props) {
       >
         <span className={styles.icon}>
           {theme === "light" ? (
-            <img src={SunIcon} alt="Light mode" width={24} height={24} />
+            <img src={MoonIcon} alt="Light mode" width={24} height={24} />
           ) : (
-            <img src={MoonIcon} alt="Dark mode" width={24} height={24} />
+            <img src={SunIcon} alt="Dark mode" width={24} height={24} />
           )}
         </span>
       </button>

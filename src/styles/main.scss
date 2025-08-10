@@ -9,7 +9,7 @@ body {
 
 // Theme tokens
 [data-theme="light"] {
-  --background-color: #{$light-very-light-grayish-blue};
+  --background-color: #{$bg-color};
   --text-color: #{$light-very-dark-grayish-blue};
 }
 
@@ -47,7 +47,7 @@ body {
 .site-footer {
   width: 100%;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.65rem;
   opacity: 0.7;
   position: absolute;
   bottom: 0;
