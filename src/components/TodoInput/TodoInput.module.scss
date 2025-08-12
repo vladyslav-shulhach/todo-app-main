@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .inputWrapper {
-  background: $wrapper-bg-color;
+  background: $light-color-wrapper;
   padding: 0.87rem 1.25rem;
   border-radius: 5px;
   margin-bottom: 1.1rem;
@@ -13,7 +13,7 @@
 }
 
 [data-theme="dark"] .inputWrapper {
-  background: $dark-very-dark-desaturated-blue;
+  background: $dark-color-wrapper;
 }
 
 .form {
@@ -41,7 +41,7 @@
 .customCheck {
   width: 20px;
   height: 20px;
-  border: 1.5px solid $light-light-grayish-blue;
+  border: 1.5px solid $light-color-border;
   border-radius: 50%;
   background: transparent;
   position: relative;
@@ -56,6 +56,10 @@
     width: 24px;
     height: 24px;
   }
+}
+
+[data-theme="dark"] .customCheck {
+  border-color: $dark-color-border;
 }
 
 .checkbox:checked + .customCheck {

@@ -1,52 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 .item {
-  background: hsl(236, 33%, 92%);
-  padding: 1.2rem 1.5rem;
-  border-radius: 8px;
+  background: hsl(0, 0%, 100%);
+  padding: 0.87rem 1.25rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1px;
+}
+@media (min-width: 768px) {
+  .item {
+    padding: 1.25rem;
+  }
+}
+
+[data-theme=dark] .item {
+  background: hsl(235, 24%, 19%);
 }
 
 .label {
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
   width: 100%;
   cursor: pointer;
+  position: relative;
 }
 
 .checkbox {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .customCheck {
-  width: 22px;
-  height: 22px;
-  border: 1.5px solid hsl(235, 19%, 35%);
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid hsl(233, 11%, 84%);
   border-radius: 50%;
   margin-right: 1rem;
   background: transparent;
   position: relative;
   transition: border-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .customCheck {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+[data-theme=dark] .customCheck {
+  border-color: hsl(237, 14%, 26%);
 }
 
 .checkbox:checked + .customCheck {
   background: linear-gradient(135deg, #57ddff 0%, #c058f3 100%);
-  border-color: transparent;
+  border: transparent;
 }
 
-.checkbox:checked + .customCheck::after {
-  content: "";
+.checkIcon {
+  width: 11px;
+  height: 9px;
   display: block;
-  position: absolute;
-  left: 6px;
-  top: 2px;
-  width: 6px;
-  height: 12px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
 }
 
 .completed {
   text-decoration: line-through;
-  color: hsl(236, 9%, 61%);
+  color: hsl(236, 33%, 92%);
+}
+
+[data-theme=dark] .completed {
+  color: hsl(233, 14%, 35%);
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.deleteButton:hover, .deleteButton:focus {
+  opacity: 1;
+}
+.deleteButton img {
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  display: block;
 }/*# sourceMappingURL=TodoItem.module.css.map */

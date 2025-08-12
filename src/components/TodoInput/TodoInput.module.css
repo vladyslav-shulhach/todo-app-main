@@ -1,9 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 .inputWrapper {
-  background: hsl(236, 33%, 92%);
-  padding: 1.2rem 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1.2rem;
+  background: hsl(0, 0%, 100%);
+  padding: 0.87rem 1.25rem;
+  border-radius: 5px;
+  margin-bottom: 1.1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+@media (min-width: 768px) {
+  .inputWrapper {
+    padding: 1.25rem;
+  }
+}
+
+[data-theme=dark] .inputWrapper {
+  background: hsl(235, 24%, 19%);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.customCheck {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid hsl(233, 11%, 84%);
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  transition: border-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .customCheck {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+[data-theme=dark] .customCheck {
+  border-color: hsl(237, 14%, 26%);
+}
+
+.checkbox:checked + .customCheck {
+  background: linear-gradient(135deg, #57ddff 0%, #c058f3 100%);
+  border: transparent;
+}
+
+.checkIcon {
+  width: 11px;
+  height: 9px;
+  display: block;
 }
 
 .input {
@@ -11,6 +79,6 @@
   border: none;
   background: transparent;
   color: var(--color-text);
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   outline: none;
 }/*# sourceMappingURL=TodoInput.module.css.map */

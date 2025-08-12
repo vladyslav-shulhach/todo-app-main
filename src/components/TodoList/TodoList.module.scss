@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .list {
-  background: $bg-color;
+  background: $light-color-bg;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -12,6 +12,10 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: #cfcfcf transparent;
+}
+
+[data-theme="dark"] .list {
+  background: $dark-color-border;
 }
 
 /* Optional: Hide scrollbar for Webkit browsers */

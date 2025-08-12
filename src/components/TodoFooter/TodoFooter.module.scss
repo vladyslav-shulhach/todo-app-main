@@ -1,12 +1,12 @@
 @use "../../styles/variables" as *;
 .footerWrapper {
-  background: $wrapper-bg-color;
+  background: $light-color-wrapper;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 [data-theme="dark"] .footerWrapper {
-  background: $dark-very-dark-desaturated-blue;
+  background: $dark-color-wrapper;
 }
 
 .fullRadius {
@@ -24,7 +24,7 @@
   font-size: 0.75rem;
 
   span {
-    color: $light-dark-grayish-blue;
+    color: $light-color-gray;
   }
 
   // Inline filter for desktop
@@ -47,7 +47,7 @@
   button {
     background: none;
     border: none;
-    color: $light-dark-grayish-blue;
+    color: $light-color-gray;
     cursor: pointer;
     transition: background 0.2s;
 
@@ -59,18 +59,26 @@
 
 .active {
   font-weight: bold;
-  color: $primary-color;
+  color: $color-primary;
 }
 
 .clear {
   background: none;
   border: none;
   padding: 0;
-  color: $light-dark-grayish-blue;
+  color: $light-color-text-secondary;
   cursor: pointer;
   transition: background 0.2s;
 
   &:hover {
-    color: $light-very-dark-grayish-blue;
+    color: $light-color-gray;
   }
+}
+
+[data-theme="dark"] .clear {
+  color: $dark-color-text-secondary;
+}
+
+[data-theme="dark"] .clear:hover {
+  color: $dark-color-text-hover;
 }

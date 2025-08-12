@@ -1,1 +1,1 @@
-{"version":3,"sources":["TodoList.module.scss","TodoList.module.css"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,UAAA;EACA,SAAA;ACCF","file":"TodoList.module.css"}
+{"version":3,"sources":["../../styles/_variables.scss","TodoList.module.scss","TodoList.module.css"],"names":[],"mappings":"AAAQ,8FAAA;ACER;EACE,2BDIe;ECHf,gBAAA;EACA,UAAA;EACA,SAAA;EACA,gBAAA;EACA,0BAAA;EACA,gBAAA;EACA,4DAAA;EACA,iCAAA;EACA,qBAAA;EACA,oCAAA;ACAF;;ADGA;EACE,8BDIkB;AEJpB;;ADGA,iDAAA;AACA;EACE,UAAA;EACA,uBAAA;EACA,kBAAA;ACAF;;ADEA;EACE,mBAAA;ACCF","file":"TodoList.module.css"}

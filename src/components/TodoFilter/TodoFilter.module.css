@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+.filters {
+  background: hsl(0, 0%, 100%);
+  padding: 0.87rem 1.25rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.1rem 0;
+}
+.filters button {
+  background: none;
+  border: none;
+  color: hsl(236, 9%, 61%);
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+.filters button:hover {
+  color: hsl(235, 19%, 35%);
+}
+
+[data-theme=dark] .filters {
+  background: hsl(235, 24%, 19%);
+}
+
+.active {
+  font-weight: bold;
+  color: hsl(220, 98%, 61%) !important;
+  background: var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .filters {
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}/*# sourceMappingURL=TodoFilter.module.css.map */

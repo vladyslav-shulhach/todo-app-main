@@ -2,6 +2,7 @@
 @use "./variables" as *;
 
 // Font
+
 body {
   font-family: $font-family;
   font-size: $font-size-base;
@@ -9,13 +10,13 @@ body {
 
 // Theme tokens
 [data-theme="light"] {
-  --background-color: #{$bg-color};
-  --text-color: #{$light-very-dark-grayish-blue};
+  --background-color: #{$light-color-bg};
+  --text-color: #{$light-color-text};
 }
 
 [data-theme="dark"] {
-  --background-color: #{$dark-dark-blue};
-  --text-color: #{$dark-light-grayish-blue};
+  --background-color: #{$dark-color-bg};
+  --text-color: #{$dark-color-text};
 }
 
 // Global styles

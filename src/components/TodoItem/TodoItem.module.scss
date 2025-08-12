@@ -1,12 +1,12 @@
 @use "../../styles/variables" as *;
 
 .item {
-  background: $wrapper-bg-color;
+  background: $light-color-wrapper;
   padding: 0.87rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 
   @media (min-width: $breakpoint-tablet) {
     padding: 1.25rem;
@@ -14,7 +14,7 @@
 }
 
 [data-theme="dark"] .item {
-  background: $dark-very-dark-desaturated-blue;
+  background: $dark-color-wrapper;
 }
 
 .label {
@@ -39,7 +39,7 @@
 .customCheck {
   width: 20px;
   height: 20px;
-  border: 1.5px solid $light-light-grayish-blue;
+  border: 1.5px solid $light-color-border;
   border-radius: 50%;
   margin-right: 1rem;
   background: transparent;
@@ -57,6 +57,10 @@
   }
 }
 
+[data-theme="dark"] .customCheck {
+  border-color: $dark-color-border;
+}
+
 .checkbox:checked + .customCheck {
   background: linear-gradient(135deg, #57ddff 0%, #c058f3 100%);
   border: transparent;
@@ -70,7 +74,11 @@
 
 .completed {
   text-decoration: line-through;
-  color: $light-dark-grayish-blue;
+  color: $light-color-text-secondary;
+}
+
+[data-theme="dark"] .completed {
+  color: $dark-color-text-muted;
 }
 
 .deleteButton {

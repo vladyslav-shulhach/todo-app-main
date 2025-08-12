@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .filters {
-  background: $wrapper-bg-color;
+  background: $light-color-wrapper;
   padding: 0.87rem 1.25rem;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -14,7 +14,7 @@
   button {
     background: none;
     border: none;
-    color: $light-dark-grayish-blue;
+    color: $light-color-gray;
     padding: 0;
     border-radius: 5px;
     cursor: pointer;
@@ -22,18 +22,18 @@
     font-size: 1rem;
 
     &:hover {
-      color: $light-very-dark-grayish-blue;
+      color: $light-color-text;
     }
   }
 }
 
 [data-theme="dark"] .filters {
-  background: $dark-very-dark-desaturated-blue;
+  background: $dark-color-wrapper;
 }
 
 .active {
   font-weight: bold;
-  color: $primary-color !important;
+  color: $color-primary !important;
   background: var(--color-border);
 }
 
