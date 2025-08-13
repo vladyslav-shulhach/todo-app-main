@@ -29,6 +29,14 @@
 
 [data-theme="dark"] .filters {
   background: $dark-color-wrapper;
+
+  button {
+    color: $dark-color-text-secondary;
+
+    &:hover {
+      color: $dark-color-text-hover;
+    }
+  }
 }
 
 .active {

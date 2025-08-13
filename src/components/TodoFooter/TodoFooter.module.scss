@@ -56,7 +56,17 @@
     transition: background 0.2s;
 
     &:hover {
-      background: var(--color-border);
+      background: $light-color-text;
+    }
+  }
+}
+
+[data-theme="dark"] .filters {
+  button {
+    color: $dark-color-text-secondary;
+
+    &:hover {
+      background: $dark-color-text-hover;
     }
   }
 }
