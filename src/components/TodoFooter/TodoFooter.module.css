@@ -26,6 +26,9 @@
 .footer span {
   color: hsl(236, 9%, 61%);
 }
+.footer [data-theme=dark] span {
+  color: hsl(234, 11%, 52%);
+}
 @media (min-width: 768px) {
   .footer .filters {
     margin: 0;

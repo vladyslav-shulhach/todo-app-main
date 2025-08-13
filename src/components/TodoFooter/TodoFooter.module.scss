@@ -24,7 +24,11 @@
   font-size: 0.75rem;
 
   span {
-    color: $light-color-gray;
+    color: $light-color-text-secondary;
+  }
+
+  [data-theme="dark"] span {
+    color: $dark-color-text-secondary;
   }
 
   // Inline filter for desktop
@@ -47,7 +51,7 @@
   button {
     background: none;
     border: none;
-    color: $light-color-gray;
+    color: $light-color-text-secondary;
     cursor: pointer;
     transition: background 0.2s;
 
@@ -71,7 +75,7 @@
   transition: background 0.2s;
 
   &:hover {
-    color: $light-color-gray;
+    color: $light-color-text;
   }
 }
 
