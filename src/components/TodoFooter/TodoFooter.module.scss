@@ -27,10 +27,6 @@
     color: $light-color-text-secondary;
   }
 
-  [data-theme="dark"] span {
-    color: $dark-color-text-secondary;
-  }
-
   // Inline filter for desktop
   @media (min-width: $breakpoint-tablet) {
     .filters {
@@ -41,6 +37,12 @@
       border-radius: 0;
       gap: 1.2rem;
     }
+  }
+}
+
+[data-theme="dark"] .footer {
+  span {
+    color: $dark-color-text-secondary;
   }
 }
 

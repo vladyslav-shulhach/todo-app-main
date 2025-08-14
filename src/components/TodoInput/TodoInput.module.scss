@@ -77,7 +77,11 @@
   width: 100%;
   border: none;
   background: transparent;
-  color: var(--color-text);
+  color: $light-color-text-secondary;
   font-size: 0.75rem;
   outline: none;
+}
+
+[data-theme="dark"] .input {
+  color: $dark-color-text-secondary;
 }
