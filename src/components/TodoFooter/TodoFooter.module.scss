@@ -5,6 +5,10 @@
   background: $light-color-wrapper;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 1.45rem;
+  }
 }
 
 [data-theme="dark"] .footerWrapper {
