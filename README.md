@@ -41,11 +41,11 @@ It supports all basic todo features, filtering, theme switching, and reordering 
 
 ### Desktop
 
-![Desktop Version Preview](./screenshots/desktop-preview.png)
+![Desktop Version Preview](./desktop-preview.png)
 
 ### Mobile
 
-![Mobile Version Preview](./screenshots/mobile-preview.png)
+![Mobile Version Preview](./mobile-preview.png)
 
 ---
 
