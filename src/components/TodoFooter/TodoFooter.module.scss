@@ -1,4 +1,6 @@
 @use "../../styles/variables" as *;
+
+// Wrapper
 .footerWrapper {
   background: $light-color-wrapper;
   padding: 1.2rem 1.5rem;
@@ -12,11 +14,11 @@
 .fullRadius {
   border-radius: 5px;
 }
-
 .bottomRadius {
   border-radius: 0 0 5px 5px;
 }
 
+// Footer content
 .footer {
   display: flex;
   align-items: center;
@@ -27,7 +29,6 @@
     color: $light-color-text-secondary;
   }
 
-  // Inline filter for desktop
   @media (min-width: $breakpoint-tablet) {
     .filters {
       margin: 0;
@@ -46,6 +47,7 @@
   }
 }
 
+// Filters
 .filters {
   display: flex;
   gap: 0.5rem;
@@ -78,6 +80,7 @@
   color: $color-primary;
 }
 
+// Clear button
 .clear {
   background: none;
   border: none;
@@ -94,7 +97,6 @@
 [data-theme="dark"] .clear {
   color: $dark-color-text-secondary;
 }
-
 [data-theme="dark"] .clear:hover {
   color: $dark-color-text-hover;
 }

@@ -12,6 +12,15 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: #cfcfcf transparent;
+
+  @media (min-width: $breakpoint-tablet) {
+    @media (max-height: 799px) {
+      max-height: 44vh;
+    }
+    @media (min-height: 800px) {
+      max-height: 49vh;
+    }
+  }
 }
 
 [data-theme="dark"] .list {

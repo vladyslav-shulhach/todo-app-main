@@ -1,5 +1,6 @@
 @use "../../styles/variables" as *;
 
+// Item container
 .item {
   background: $light-color-wrapper;
   padding: 0.87rem 1.25rem;
@@ -17,6 +18,7 @@
   background: $dark-color-wrapper;
 }
 
+// Checkbox and label
 .label {
   font-size: 0.75rem;
   display: flex;
@@ -24,6 +26,10 @@
   width: 100%;
   cursor: pointer;
   position: relative;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 1.125rem;
+  }
 }
 
 .checkbox {
@@ -72,6 +78,7 @@
   display: block;
 }
 
+// Completed text
 .completed {
   text-decoration: line-through;
   color: $light-color-text-muted;
@@ -81,6 +88,7 @@
   color: $dark-color-text-muted;
 }
 
+// Delete button
 .deleteButton {
   background: none;
   border: none;

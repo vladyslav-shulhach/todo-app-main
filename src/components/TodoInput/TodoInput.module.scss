@@ -1,5 +1,6 @@
 @use "../../styles/variables" as *;
 
+// Wrapper
 .inputWrapper {
   background: $light-color-wrapper;
   padding: 0.87rem 1.25rem;
@@ -16,12 +17,14 @@
   background: $dark-color-wrapper;
 }
 
+// Form layout
 .form {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+// Checkbox and custom check
 .label {
   display: flex;
   align-items: center;
@@ -73,6 +76,7 @@
   display: block;
 }
 
+// Input
 .input {
   width: 100%;
   border: none;
@@ -80,6 +84,10 @@
   color: $light-color-text-secondary;
   font-size: 0.75rem;
   outline: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 1.125rem;
+  }
 }
 
 [data-theme="dark"] .input {
