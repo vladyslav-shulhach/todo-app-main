@@ -1,69 +1,100 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A classic Todo app with a modern UI, dark/light theme toggle, and drag & drop reordering.  
+This project is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Overview](#overview)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+- [Built With](#built-with)
+- [Author](#author)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Overview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+This Todo app allows users to manage their tasks efficiently with a clean, responsive interface.  
+It supports all basic todo features, filtering, theme switching, and reordering tasks via drag-and-drop.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Add** new todos
+- **Mark** todos as complete/incomplete
+- **Delete** todos
+- **Filter** by all / active / completed
+- **Clear** all completed todos
+- **Toggle** between light and dark mode
+- **Responsive** layout for mobile, tablet, and desktop
+- **Drag & drop** to reorder todos (desktop & mobile)
+- **Accessible**: keyboard navigation and ARIA labels
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## Screenshots
+
+### Desktop
+
+![Desktop Version Preview](./screenshots/desktop-preview.png)
+
+### Mobile
+
+![Mobile Version Preview](./screenshots/mobile-preview.png)
+
+---
+
+## Getting Started
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/your-username/todo-app.git
+   cd todo-app
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```sh
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```sh
+   npm run build
+   ```
+
+---
+
+## Built With
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SCSS](https://sass-lang.com/)
+- [Vite](https://vitejs.dev/)
+- [Frontend Mentor](https://www.frontendmentor.io/)
+- [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) (for drag & drop)
+
+---
+
+## Author
+
+- [Vladyslav Shulhach](https://www.frontendmentor.io/profile/Vladyslav-Shulhach)
+- [GitHub](https://github.com/Vladyslav-Shulhach)
+
+---
+
+## Challenge
+
+[Frontend Mentor - Todo App Challenge](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)
