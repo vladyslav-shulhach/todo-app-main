@@ -5,6 +5,12 @@ This project is a solution to the [Todo app challenge on Frontend Mentor](https:
 
 ---
 
+## Live Demo
+
+[View the live app here](https://todo-app-main-rouge.vercel.app/)
+
+---
+
 ## Table of Contents
 
 - [Overview](#overview)
