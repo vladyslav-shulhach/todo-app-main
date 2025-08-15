@@ -32,7 +32,6 @@ It supports all basic todo features, filtering, theme switching, and reordering 
 - **Clear** all completed todos
 - **Toggle** between light and dark mode
 - **Responsive** layout for mobile, tablet, and desktop
-- **Drag & drop** to reorder todos (desktop & mobile)
 - **Accessible**: keyboard navigation and ARIA labels
 
 ---
@@ -83,15 +82,12 @@ It supports all basic todo features, filtering, theme switching, and reordering 
 - [TypeScript](https://www.typescriptlang.org/)
 - [SCSS](https://sass-lang.com/)
 - [Vite](https://vitejs.dev/)
-- [Frontend Mentor](https://www.frontendmentor.io/)
-- [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) (for drag & drop)
 
 ---
 
 ## Author
 
-- [Vladyslav Shulhach](https://www.frontendmentor.io/profile/Vladyslav-Shulhach)
-- [GitHub](https://github.com/Vladyslav-Shulhach)
+- [Vladyslav Shulhach](https://github.com/Vladyslav-Shulhach)
 
 ---
 
